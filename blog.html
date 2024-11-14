@@ -87,5 +87,52 @@
                  I did look through some of the CSS reading materials on the course 
                  website to work through some challenges like the grid and resizing. 
             </p>
+
+    <h2>Assignment 3, Nov 14</h2>
+
+        <h3>Challenges</h3>
+            <p>
+                One of the biggest challenges in this assignment was implementing the 
+                filtering system so it worked with both the original posts 
+                and any new posts I created. Initially, the filtering logic 
+                worked well for the original posts, but I struggled with getting it to 
+                re-filter correctly once new posts were added. Every time I applied a 
+                filter, it would only consider the currently displayed posts, which led 
+                to issues when I wanted to change filters or clear them altogether. when
+                I tried to remove all filters and update so all the posts came back, they 
+                wouldn't come back. <br><br>
+                The solution involved creating a single array, allPosts, to keep track 
+                of all the posts including created ones. By iterating over allPosts each 
+                time I applied a filter, all the posts were considered every time, 
+                even if they had been removed from the DOM based on previous filtering.
+            </p>
+
+        <h3>What I Learned</h3>
+            <p>
+                I learned during this assignment how important it is to maintain a data
+                structure, like my array, in order to keep track of all the posts on 
+                the page. By storing all posts in a single array, I could manage 
+                filtering without constantly modifying the DOM directly. I also gained a 
+                better understanding of JavaScript event handling and DOM manipulation, 
+                especially with dynamically added elements. Another insight was the 
+                importance of thinking through edge cases like clearing filters or 
+                re-applying filters multiple times with different criteria.
+            </p>
+        <h3>Resources</h3>
+            <p>
+                 I rewatched some of the lecture videos to help me remember/have a better
+                 understanding of some of the things I needed to impliment into this 
+                 assignment. I also used this page, 
+                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+                 > Spread Syntax </a> in order to clean up my code a little bit.
+                 <br><br>
+                 I had to google why my for loop wasn't working, I read through some 
+                 sites but couldn't find a fix for my issue. I then posted my code 
+                 snippet into chatGPT to see if it could find an issue with my code, 
+                 which also did not lead to a solution but gave me a resouce on
+                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" 
+                 >forEach</a>
+                 functions which helped me with my allPosts function. 
+            </p>
 </body>
 </html>
