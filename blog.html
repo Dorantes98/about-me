@@ -136,5 +136,52 @@
                  >forEach</a>
                  functions which helped me with my allPosts function. 
             </p>
+            <hr>
+
+    <h2>Assignment 5, Dec 4</h2>
+
+        <h3>Challenges</h3>
+            <p>
+                I think the biggest challenge was making sure the templates were showing
+                the same thing the .html file would show. My postPage.handlebars 
+                initially didn't include the filter-container, which caused the filters 
+                tab to disappear from the page. After carefully comparing index.html with 
+                my template and inspecting the rendered HTML in the browser's developer 
+                tools, I realized that I missed this section completely. Adding the 
+                filter-container fixed the issue.
+                <br><br>
+                Reusing the postsPage.handlebars template for both the root page (/) and 
+                the single post page (/posts/:id) was tricky. The Handlebars {{#if}} 
+                logic wasn't working as expected at first because the post context wasn't 
+                being passed correctly in the route. It took me awhile of looking 
+                through my function to realize I put singlePost instead of postsPage 
+                from when I initially created the singlePost handlebars.
+            </p>
+        <h3>What I Learned</h3>
+            <p>
+                I learned the importance of reusing partials and layouts to reduce code 
+                duplication. This approach not only simplifies the structure of the 
+                templates but also makes them more maintainable. I also gained a deeper 
+                understanding of Handlebars, especially how to use {{#if}} and {{#each}} 
+                blocks to conditionally render content. I also realized how critical it is to 
+                carefully compare the original hard-coded HTML (index.html) with the 
+                generated templates to ensure consistency. For example, implementing a 
+                post template and using it on the client side.
+            </p>
+        <h3>Resources</h3>
+            <p>
+                Inspecting the rendered HTML and checking for 
+                missing elements or CSS classes was crucial for debugging layout issues.
+                I used this page, <a href="https://domizajac.medium.com/how-to-use-chrome-devtools-to-debug-your-webpage-intro-for-beginners-59aa58fa5f78">
+                How to use Chrome DevTools to debug HTML structure/styles</a> to help me
+                learn how to use the inspect to compare two different posts from Benny's
+                List. This allowed me to see if the post-contents from a user inputed 
+                post matched an original post. 
+                <br><br>
+                I also used the lecture notes/example code from handlebar-templating to help me 
+                create and fix my templates when needed. I had to google how to tell if
+                two posts matched and that is how I found the idea of using the DevTools
+                to inspect two different posts. 
+            </p>
 </body>
 </html>
